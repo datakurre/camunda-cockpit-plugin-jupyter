@@ -6,9 +6,21 @@
       "format": null,
       "last_modified": "1980-01-01T00:00:00",
       "mimetype": null,
+      "name": "Plotting.ipynb",
+      "path": "Plotting.ipynb",
+      "size": 3057,
+      "type": "notebook",
+      "writable": true
+    },
+    {
+      "content": null,
+      "created": "1980-01-01T00:00:00",
+      "format": null,
+      "last_modified": "1980-01-01T00:00:00",
+      "mimetype": null,
       "name": "Example.ipynb",
       "path": "Example.ipynb",
-      "size": 1236194,
+      "size": 3315,
       "type": "notebook",
       "writable": true
     }
