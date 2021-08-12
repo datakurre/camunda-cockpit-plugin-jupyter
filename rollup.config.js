@@ -28,75 +28,13 @@ const plugins = [
 
 export default [
   {
-    input: "src/RobotModule/index.ts",
-    output: {
-      file: "robot-module.js",
-    },
-    plugins,
-  },
-  {
     onwarn: function(warning, superOnWarn) {
       if (warning.code === 'THIS_IS_UNDEFINED') { return; }
       superOnWarn(warning);
     },
-    input: "src/instance-historic-activities.tsx",
+    input: "src/jupyter-lite-route.ts",
     output: {
-      file: "instance-historic-activities.js",
-    },
-    plugins,
-  },
-  {
-    onwarn: function(warning, superOnWarn) {
-      if (warning.code === 'THIS_IS_UNDEFINED') { return; }
-      superOnWarn(warning);
-    },
-    input: "src/definition-historic-activities.tsx",
-    output: {
-      file: "definition-historic-activities.js",
-    },
-    plugins,
-  },
-  {
-    onwarn: function(warning, superOnWarn) {
-      if (warning.code === 'THIS_IS_UNDEFINED') { return; }
-      superOnWarn(warning);
-    },
-    input: "src/instance-route-history.tsx",
-    output: {
-      file: "instance-route-history.js",
-    },
-    plugins,
-  },
-  {
-    onwarn: function(warning, superOnWarn) {
-      if (warning.code === 'THIS_IS_UNDEFINED') { return; }
-      superOnWarn(warning);
-    },
-    input: "src/tasklist-audit-log.tsx",
-    output: {
-      file: "tasklist-audit-log.js",
-    },
-    plugins,
-  },
-  {
-    onwarn: function(warning, superOnWarn) {
-      if (warning.code === 'THIS_IS_UNDEFINED') { return; }
-      superOnWarn(warning);
-    },
-    input: "src/instance-tab-modify.tsx",
-    output: {
-      file: "instance-tab-modify.js",
-    },
-    plugins,
-  },
-  {
-    onwarn: function(warning, superOnWarn) {
-      if (warning.code === 'THIS_IS_UNDEFINED') { return; }
-      superOnWarn(warning);
-    },
-    input: "src/robolite-route.tsx",
-    output: {
-      file: "robolite-route.js",
+      file: "jupyter-lite-route.js",
     },
     plugins,
   },

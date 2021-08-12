@@ -1,15 +1,12 @@
-import './instance-route-history.scss';
-
-import React from 'react';
 import {RoutePluginParams} from './types';
 
 export default [
   {
-    id: 'jupyterNavigation',
+    id: 'jupyterLiteNavigation',
     pluginPoint: 'cockpit.navigation',
     properties: {
       pagePath: '#/jupyter',
-      label: 'Jupyter Lab',
+      label: 'Jupyter Lite',
       priority: 1,
       checkActive: function(path: string) {
         return path.indexOf('#/jupyter') > -1;
@@ -17,7 +14,7 @@ export default [
     }
   },
   {
-    id: 'jupyterRoute',
+    id: 'jupyterLiteRoute',
     pluginPoint: 'cockpit.route',
     properties: {
       path: '/jupyter',
