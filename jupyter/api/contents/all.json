@@ -6,9 +6,9 @@
       "format": null,
       "last_modified": "1980-01-01T00:00:00",
       "mimetype": null,
-      "name": "Plotting.ipynb",
-      "path": "Plotting.ipynb",
-      "size": 3057,
+      "name": "Plotly.ipynb",
+      "path": "Plotly.ipynb",
+      "size": 1702,
       "type": "notebook",
       "writable": true
     },
@@ -18,9 +18,9 @@
       "format": null,
       "last_modified": "1980-01-01T00:00:00",
       "mimetype": null,
-      "name": "Example.ipynb",
-      "path": "Example.ipynb",
-      "size": 3315,
+      "name": "RobotFramework.ipynb",
+      "path": "RobotFramework.ipynb",
+      "size": 2851,
       "type": "notebook",
       "writable": true
     }
