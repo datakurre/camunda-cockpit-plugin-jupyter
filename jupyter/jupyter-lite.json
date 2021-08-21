@@ -22,7 +22,7 @@
         "name": "jupyter-matplotlib"
       },
       {
-        "load": "static/remoteEntry.da413bc19ddee099dcef.js",
+        "load": "static/remoteEntry.9d920d377941cad98d90.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-bpmn",
         "style": "./style"
