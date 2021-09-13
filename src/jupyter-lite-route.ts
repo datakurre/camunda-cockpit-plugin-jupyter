@@ -1,4 +1,13 @@
-import {RoutePluginParams} from './types';
+import {API, RoutePluginParams} from './types';
+
+
+export const headers = (api: API) => {
+  return {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+    'X-XSRF-TOKEN': api.CSRFToken,
+  };
+};
 
 export default [
   {
@@ -21,9 +30,22 @@ export default [
       label: '/jupyter',
     },
 
-    render: (node: Element, { api }: RoutePluginParams) => {
+    render: async (node: Element, { api }: RoutePluginParams) => {
         const iframe = document.createElement('iframe');
-        iframe.src = '../scripts/jupyter';
+        try {
+            const userId = (await (await fetch(`${api.adminApi}/auth/user/default`, {
+                method: 'get',
+                headers: headers(api),
+            })).json())['userId'];
+            const profile = (await (await fetch(`${api.engineApi}/user/${userId}/profile`, {
+                method: 'get',
+                headers: headers(api),
+            })).json());
+            const displayName = `${profile["firstName"]}`;
+            iframe.src = `../scripts/jupyter/lab/index.html?room=default&username=${displayName}`;
+        } catch (e) {
+            iframe.src = '../scripts/jupyter/lab/index.html';
+        }
         iframe.style.setProperty('position', 'absolute');
         iframe.style.setProperty('top', '0px');
         iframe.style.setProperty('right', '0px');

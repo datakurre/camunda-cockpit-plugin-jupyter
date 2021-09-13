@@ -1,6 +1,7 @@
 {
   "jupyter-config-data": {
     "appName": "JupyterLite",
+    "collaborative": true,
     "appUrl": "./lab",
     "appVersion": "0.1.0-alpha.6",
     "baseUrl": "./",
