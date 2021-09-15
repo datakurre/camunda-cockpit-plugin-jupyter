@@ -117,6 +117,7 @@ class OutputWidget extends _lumino_widgets__WEBPACK_IMPORTED_MODULE_0__.Widget {
     async renderModel(model) {
         try {
             let changed = false;
+            let resized = false;
             if (!this._bpmn) {
                 this._bpmn = new bpmn_js_lib_NavigatedViewer__WEBPACK_IMPORTED_MODULE_1__.default({
                     additionalModules: [_RobotModule__WEBPACK_IMPORTED_MODULE_2__.default, bpmn_js_lib_features_modeling__WEBPACK_IMPORTED_MODULE_3__.default, diagram_js_lib_features_tooltips__WEBPACK_IMPORTED_MODULE_4__.default],
@@ -142,10 +143,29 @@ class OutputWidget extends _lumino_widgets__WEBPACK_IMPORTED_MODULE_0__.Widget {
                 if (config.style) {
                     for (const name of Object.keys(config.style)) {
                         this.node.style.setProperty(name, config.style[name]);
-                        if (name === 'height') {
-                            changed = true;
+                        if (name === 'height' && config.style[name] !== this._height) {
+                            this._height = config.style[name];
+                            resized = true;
                         }
                     }
+                }
+                if (this._bpmn && config.zoom) {
+                    if (config.zoom !== this._zoom) {
+                        const registry = this._bpmn.get('elementRegistry');
+                        if (registry.get(config.zoom)) {
+                            this._bpmn.get('canvas').zoom(1.0, registry.get(config.zoom));
+                        }
+                        else {
+                            this._bpmn.get('canvas').zoom('fit-viewport', 'auto');
+                            if (config.zoom !== 'fit-viewport') {
+                                this._bpmn.get('canvas').zoom(config.zoom, 'auto');
+                            }
+                        }
+                        this._zoom = config.zoom;
+                    }
+                }
+                else if (this._bpmn && resized) {
+                    this._bpmn.get('canvas').zoom('fit-viewport', 'auto');
                 }
                 if (config.colors) {
                     const modeling = this._bpmn.get('modeling');
@@ -216,4 +236,4 @@ const extension = {
 /***/ })
 
 }]);
-//# sourceMappingURL=lib_index_js-webpack_sharing_consume_default_bpmn-moddle_bpmn-moddle-webpack_sharing_consume_-64f830.9e7b628e056d6de2f284.js.map
+//# sourceMappingURL=lib_index_js-webpack_sharing_consume_default_bpmn-moddle_bpmn-moddle-webpack_sharing_consume_-64f830.fd4aa99fa4f924b1c980.js.map

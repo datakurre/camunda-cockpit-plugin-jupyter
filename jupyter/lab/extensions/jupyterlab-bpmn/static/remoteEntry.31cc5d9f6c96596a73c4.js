@@ -124,7 +124,7 @@ __webpack_require__.d(exports, {
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "" + chunkId + "." + {"vendors-node_modules_min-dash_dist_index_esm_js":"738d332e86a57b94ae53","vendors-node_modules_diagram-js_lib_core_ElementFactory_js-node_modules_diagram-js_lib_draw_B-447884":"18242ce9201497587f0b","vendors-node_modules_bpmn-js_lib_NavigatedViewer_js-node_modules_bpmn-js_lib_features_modelin-eb45ee":"828f2e6276a960cd4115","lib_index_js-webpack_sharing_consume_default_bpmn-moddle_bpmn-moddle-webpack_sharing_consume_-64f830":"9e7b628e056d6de2f284","vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_cssW-926fd9":"7257682588f3738bc1a5","style_index_css":"17b94055a3846d301c3b","vendors-node_modules_bpmn-moddle_dist_index_esm_js":"425f0dd6547a63438c00","vendors-node_modules_diagram-js_index_js":"478da54825be51892bc1"}[chunkId] + ".js";
+/******/ 			return "" + chunkId + "." + {"vendors-node_modules_min-dash_dist_index_esm_js":"738d332e86a57b94ae53","vendors-node_modules_diagram-js_lib_core_ElementFactory_js-node_modules_diagram-js_lib_draw_B-447884":"18242ce9201497587f0b","vendors-node_modules_bpmn-js_lib_NavigatedViewer_js-node_modules_bpmn-js_lib_features_modelin-eb45ee":"828f2e6276a960cd4115","lib_index_js-webpack_sharing_consume_default_bpmn-moddle_bpmn-moddle-webpack_sharing_consume_-64f830":"fd4aa99fa4f924b1c980","vendors-node_modules_css-loader_dist_runtime_api_js-node_modules_css-loader_dist_runtime_cssW-926fd9":"7257682588f3738bc1a5","style_index_css":"17b94055a3846d301c3b","vendors-node_modules_bpmn-moddle_dist_index_esm_js":"425f0dd6547a63438c00","vendors-node_modules_diagram-js_index_js":"478da54825be51892bc1"}[chunkId] + ".js";
 /******/ 		};
 /******/ 	})();
 /******/ 	
@@ -243,7 +243,7 @@ __webpack_require__.d(exports, {
 /******/ 				case "default": {
 /******/ 					register("bpmn-moddle", "7.1.2", () => (Promise.all([__webpack_require__.e("vendors-node_modules_min-dash_dist_index_esm_js"), __webpack_require__.e("vendors-node_modules_bpmn-moddle_dist_index_esm_js")]).then(() => (() => (__webpack_require__(/*! ./node_modules/bpmn-moddle/dist/index.esm.js */ "./node_modules/bpmn-moddle/dist/index.esm.js"))))));
 /******/ 					register("diagram-js", "7.3.0", () => (Promise.all([__webpack_require__.e("vendors-node_modules_min-dash_dist_index_esm_js"), __webpack_require__.e("vendors-node_modules_diagram-js_lib_core_ElementFactory_js-node_modules_diagram-js_lib_draw_B-447884"), __webpack_require__.e("vendors-node_modules_diagram-js_index_js")]).then(() => (() => (__webpack_require__(/*! ./node_modules/diagram-js/index.js */ "./node_modules/diagram-js/index.js"))))));
-/******/ 					register("jupyterlab-bpmn", "0.3.1", () => (Promise.all([__webpack_require__.e("vendors-node_modules_min-dash_dist_index_esm_js"), __webpack_require__.e("vendors-node_modules_diagram-js_lib_core_ElementFactory_js-node_modules_diagram-js_lib_draw_B-447884"), __webpack_require__.e("vendors-node_modules_bpmn-js_lib_NavigatedViewer_js-node_modules_bpmn-js_lib_features_modelin-eb45ee"), __webpack_require__.e("lib_index_js-webpack_sharing_consume_default_bpmn-moddle_bpmn-moddle-webpack_sharing_consume_-64f830")]).then(() => (() => (__webpack_require__(/*! ./lib/index.js */ "./lib/index.js"))))));
+/******/ 					register("jupyterlab-bpmn", "0.3.2", () => (Promise.all([__webpack_require__.e("vendors-node_modules_min-dash_dist_index_esm_js"), __webpack_require__.e("vendors-node_modules_diagram-js_lib_core_ElementFactory_js-node_modules_diagram-js_lib_draw_B-447884"), __webpack_require__.e("vendors-node_modules_bpmn-js_lib_NavigatedViewer_js-node_modules_bpmn-js_lib_features_modelin-eb45ee"), __webpack_require__.e("lib_index_js-webpack_sharing_consume_default_bpmn-moddle_bpmn-moddle-webpack_sharing_consume_-64f830")]).then(() => (() => (__webpack_require__(/*! ./lib/index.js */ "./lib/index.js"))))));
 /******/ 				}
 /******/ 				break;
 /******/ 			}
@@ -536,4 +536,4 @@ __webpack_require__.d(exports, {
 /******/ 	
 /******/ })()
 ;
-//# sourceMappingURL=remoteEntry.1ef6da29da3a28d233d1.js.map
+//# sourceMappingURL=remoteEntry.31cc5d9f6c96596a73c4.js.map
