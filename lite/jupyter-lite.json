@@ -1,0 +1,12 @@
+{
+  "jupyter-lite-schema-version": 0,
+  "jupyter-config-data": {
+    "appName": "Jupyter Lite",
+    "collaborative": true,
+    "exposeAppInBrowser": true,
+    "disabledExtensions": [
+      "pyolite-kernel-extension",
+      "nbdime-jupyterlab"
+    ]
+  }
+}

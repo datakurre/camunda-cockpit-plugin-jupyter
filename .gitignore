@@ -1,3 +1,12 @@
 .idea/
+.cache/
+*.doit.db
+lib/
+dist/
 node_modules/
+pypi/
+tmp/
+/lite/jupyterlite-camunda/build/
+_pypi.ts
 camunda-cockpit-ui.js
+*.tsbuildinfo

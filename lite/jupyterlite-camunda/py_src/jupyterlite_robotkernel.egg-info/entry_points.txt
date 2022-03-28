@@ -1,0 +1,3 @@
+[jupyterlite.addon.v0]
+piplite = jupyterlite_robotkernel.piplite:PipliteAddon
+
