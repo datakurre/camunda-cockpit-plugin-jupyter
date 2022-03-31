@@ -21,7 +21,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.f18bebddb2ff443b64b8.js",
+        "load": "static/remoteEntry.7b4b35bde938a32b789b.js",
         "name": "@jupyterlite/pyolite-camunda-kernel-extension",
         "style": "./style"
       },
@@ -58,7 +58,7 @@
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
     "litePluginSettings": {
-      "@jupyterlite/pyolite-camunda-kernel-extension:kernel": {
+      "@jupyterlite/pyolite-kernel-extension:kernel": {
         "pipliteUrls": [
           "./pypi/all.json?sha256=e72d68d9ae31c124b8dfac0d3f7fbad0f84dc4be88469aff220a1528738e41ff"
         ]
