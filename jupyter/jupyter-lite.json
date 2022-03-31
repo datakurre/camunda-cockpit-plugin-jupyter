@@ -51,6 +51,13 @@
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-dmn",
         "style": "./style"
+      },
+      {
+        "extension": "./extension",
+        "liteExtension": false,
+        "load": "static/remoteEntry.f372bf1de02fb50ae6e0.js",
+        "mimeExtension": "./mimeExtension",
+        "name": "jupyterlab-plotly"
       }
     ],
     "fullLabextensionsUrl": "./extensions",
