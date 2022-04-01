@@ -59,7 +59,7 @@
     "outputDir": "../../py_src/jupyterlite_camunda/labextensions/pyolite-camunda-kernel-extensions",
     "webpackConfig": "./webpack.config.js",
     "_build": {
-      "load": "static/remoteEntry.7b4b35bde938a32b789b.js",
+      "load": "static/remoteEntry.251eec909fc294a1f80a.js",
       "extension": "./extension",
       "style": "./style"
     }
