@@ -1,12 +1,14 @@
 .idea/
 .cache/
+*.egg-info
 *.doit.db
+*.tsbuildinfo
 lib/
 dist/
 node_modules/
-pypi/
 tmp/
 /lite/jupyterlite-camunda/build/
+/lite/jupyterlite-camunda/py_src/jupyterlite_camunda/labextensions/
 _pypi.ts
 camunda-cockpit-ui.js
 *.tsbuildinfo
