@@ -49,6 +49,8 @@ export class PyoliteCamundaKernel extends BaseKernel implements IKernel {
 
     const pipliteWheelUrl = URLExt.join(pypi, PIPLITE_WHEEL);
 
+    const envJson = localStorage.getItem('env') || '{}';
+
     return [
       // first we need the pyodide initialization scripts...
       `importScripts("${options.pyodideUrl}");`,
@@ -60,7 +62,9 @@ export class PyoliteCamundaKernel extends BaseKernel implements IKernel {
       `var _pipliteUrls = ${JSON.stringify(pipliteUrls)};`,
       // ...but maybe not PyPI...
       `var _disablePyPIFallback = ${JSON.stringify(!!options.disablePyPIFallback)};`,
-      // .. then we include bundled scripts
+      // .. then we Camunda Cockpit Plugin environment
+      `var _envJson = '${envJson.replace(/'/g, "\\''")}';`,
+      // .. and we include bundled scripts
       bpmn.toString(),
       // ...finally, the worker... which _must_ appear last!
       worker.toString(),

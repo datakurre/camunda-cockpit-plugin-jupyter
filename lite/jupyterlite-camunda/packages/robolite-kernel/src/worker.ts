@@ -63,6 +63,10 @@ async function loadPyodideAndPackages() {
     import pyolite
     from robotkernel.kernel import RobotKernel;
     robotkernel_instance = RobotKernel();
+    # Load Camunda Cockpit Plugin config
+    import json
+    import os
+    os.environ.update(json.loads('${_envJson}'))
   `);
 
   // make copies of these so they don't get garbage collected

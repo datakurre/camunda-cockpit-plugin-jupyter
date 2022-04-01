@@ -1,6 +1,0 @@
-pkginfo
-jupyterlab-bpmn
-jupyterlab-dmn
-jupyterlab-widgets
-jupyterlab-robotmode
-jupyterlite>=0.1.0b4

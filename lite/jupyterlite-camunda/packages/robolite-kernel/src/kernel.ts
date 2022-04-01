@@ -48,6 +48,8 @@ export class RoboliteKernel extends BaseKernel implements IKernel {
 
     const pipliteWheelUrl = URLExt.join(pypi, PIPLITE_WHEEL);
 
+    const envJson = localStorage.getItem('env') || '{}';
+
     return [
       // first we need the pyodide initialization scripts...
       `importScripts("${options.pyodideUrl}");`,
@@ -59,6 +61,8 @@ export class RoboliteKernel extends BaseKernel implements IKernel {
       `var _pipliteUrls = ${JSON.stringify(pipliteUrls)};`,
       // ...but maybe not PyPI...
       `var _disablePyPIFallback = ${JSON.stringify(!!options.disablePyPIFallback)};`,
+      // .. then we Camunda Cockpit Plugin environment
+      `var _envJson = '${envJson.replace(/'/g, "\\''")}';`,
       // ...finally, the worker... which _must_ appear last!
       worker.toString(),
     ];

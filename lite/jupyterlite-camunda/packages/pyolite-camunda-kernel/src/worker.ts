@@ -61,6 +61,10 @@ async function loadPyodideAndPackages() {
       'ipython',
     ], keep_going=True);
     import pyolite
+    # Load Camunda Cockpit Plugin config
+    import json
+    import os
+    os.environ.update(json.loads('${_envJson}'))
   `);
 
   // bpmn-moddle
