@@ -2,7 +2,7 @@
 
 Update wheels.json for RobotKernelAddon:
 
-    python -m jupyterlite_robotkernel.addons.robotkernel
+    python -m jupyterlite_camunda.addons.robotkernel
 
 """
 from typing import List
@@ -33,7 +33,7 @@ import traitlets
 
 PY = Path(sys.executable)
 DEFAULT_WHEELS = json.loads(
-    resources.read_text("jupyterlite_robotkernel.addons", "wheels.json")
+    resources.read_text("jupyterlite_camunda.addons", "wheels.json")
 )
 PYOLITE_PLUGIN_ID = "@jupyterlite/pyolite-camunda-kernel-extension:kernel"
 ROBOLITE_PLUGIN_ID = "@jupyterlite/robolite-kernel-extension:kernel"
@@ -81,11 +81,11 @@ class RobotKernelAddon(BaseAddon):
 
     def patch_jupyterlite_json(self, jupyterlite_json, whl_index):
         """add the piplite wheels to jupyter-lite.json"""
-        config = json.loads(jupyterlite_json.read_text(**UTF8))
+        config = json.loads(jupyterlite_json.read_text(**UTF8)) or {}
         old_urls = (
             config.setdefault(JUPYTER_CONFIG_DATA, {})
             .setdefault(LITE_PLUGIN_SETTINGS, {})
-            .setdefault(PYOLITE_PLUGIN_ID)
+            .setdefault(PYOLITE_PLUGIN_ID, {})
             .get(PIPLITE_URLS, [])
         ) or (
             config.setdefault(JUPYTER_CONFIG_DATA, {})
