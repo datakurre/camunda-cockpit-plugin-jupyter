@@ -10,6 +10,7 @@
       "@jupyterlite/javascript-kernel-extension",
       "nbdime-jupyterlab"
     ],
+    "exposeAppInBrowser": true,
     "faviconUrl": "./lab/favicon.ico",
     "federated_extensions": [
       {
@@ -40,7 +41,7 @@
       },
       {
         "liteExtension": false,
-        "load": "static/remoteEntry.31cc5d9f6c96596a73c4.js",
+        "load": "static/remoteEntry.edb832f84d3eabe3d328.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-bpmn",
         "style": "./style"
@@ -51,13 +52,6 @@
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-dmn",
         "style": "./style"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.f372bf1de02fb50ae6e0.js",
-        "mimeExtension": "./mimeExtension",
-        "name": "jupyterlab-plotly"
       }
     ],
     "fullLabextensionsUrl": "./extensions",
@@ -67,12 +61,17 @@
     "litePluginSettings": {
       "@jupyterlite/pyolite-camunda-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./pypi/all.json?sha256=e72d68d9ae31c124b8dfac0d3f7fbad0f84dc4be88469aff220a1528738e41ff"
+          "./pypi/all.json?sha256=24e7742b7936fb4dfdad10f11ca1c21c869b42d6ee0d1c93e5dba90dc9f73482"
+        ]
+      },
+      "@jupyterlite/pyolite-kernel-extension:kernel": {
+        "pipliteUrls": [
+          "./pypi/all.json?sha256=24e7742b7936fb4dfdad10f11ca1c21c869b42d6ee0d1c93e5dba90dc9f73482"
         ]
       },
       "@jupyterlite/robolite-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./pypi/all.json?sha256=e72d68d9ae31c124b8dfac0d3f7fbad0f84dc4be88469aff220a1528738e41ff"
+          "./pypi/all.json?sha256=24e7742b7936fb4dfdad10f11ca1c21c869b42d6ee0d1c93e5dba90dc9f73482"
         ]
       }
     },
