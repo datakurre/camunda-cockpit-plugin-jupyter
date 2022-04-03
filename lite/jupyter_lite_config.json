@@ -1,0 +1,7 @@
+{
+  "LiteBuildConfig": {
+    "contents": ["./contents"],
+    "output_dir": "../jupyter",
+    "apps": ["lab"]
+  }
+}
