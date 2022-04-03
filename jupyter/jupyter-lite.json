@@ -4,6 +4,13 @@
     "appUrl": "./lab",
     "appVersion": "0.1.0-beta.4",
     "baseUrl": "./",
+    "collaborative": true,
+    "disabledExtensions": [
+      "@jupyterlite/pyolite-kernel-extension",
+      "@jupyterlite/javascript-kernel-extension",
+      "nbdime-jupyterlab"
+    ],
+    "exposeAppInBrowser": true,
     "faviconUrl": "./lab/favicon.ico",
     "federated_extensions": [
       {
@@ -15,7 +22,7 @@
       {
         "extension": "./extension",
         "liteExtension": true,
-        "load": "static/remoteEntry.251eec909fc294a1f80a.js",
+        "load": "static/remoteEntry.7b4b35bde938a32b789b.js",
         "name": "@jupyterlite/pyolite-camunda-kernel-extension",
         "style": "./style"
       },
@@ -34,7 +41,7 @@
       },
       {
         "liteExtension": false,
-        "load": "static/remoteEntry.b833c8e2c1dc0f10d95f.js",
+        "load": "static/remoteEntry.edb832f84d3eabe3d328.js",
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-bpmn",
         "style": "./style"
@@ -45,13 +52,6 @@
         "mimeExtension": "./mimeExtension",
         "name": "jupyterlab-dmn",
         "style": "./style"
-      },
-      {
-        "extension": "./extension",
-        "liteExtension": false,
-        "load": "static/remoteEntry.f372bf1de02fb50ae6e0.js",
-        "mimeExtension": "./mimeExtension",
-        "name": "jupyterlab-plotly"
       }
     ],
     "fullLabextensionsUrl": "./extensions",
@@ -59,14 +59,19 @@
     "fullStaticUrl": "./build",
     "licensesUrl": "./lab/api/licenses",
     "litePluginSettings": {
+      "@jupyterlite/pyolite-camunda-kernel-extension:kernel": {
+        "pipliteUrls": [
+          "./pypi/all.json?sha256=24e7742b7936fb4dfdad10f11ca1c21c869b42d6ee0d1c93e5dba90dc9f73482"
+        ]
+      },
       "@jupyterlite/pyolite-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./pypi/all.json?sha256=82c2bfe6d04e7c222a336e7c923856c006e936b750b2e1fc6010305d6b43593b"
+          "./pypi/all.json?sha256=24e7742b7936fb4dfdad10f11ca1c21c869b42d6ee0d1c93e5dba90dc9f73482"
         ]
       },
       "@jupyterlite/robolite-kernel-extension:kernel": {
         "pipliteUrls": [
-          "./pypi/all.json?sha256=82c2bfe6d04e7c222a336e7c923856c006e936b750b2e1fc6010305d6b43593b"
+          "./pypi/all.json?sha256=24e7742b7936fb4dfdad10f11ca1c21c869b42d6ee0d1c93e5dba90dc9f73482"
         ]
       }
     },
